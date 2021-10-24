@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="12296" started-at="2021-10-23T13:07:22Z" finished-at="2021-10-23T13:07:34Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="12296" started-at="2021-10-23T13:07:22Z" finished-at="2021-10-23T13:07:34Z">
+      <class name="com.qa.crud.testcases.AddressListTestcases">
+        <test-method status="PASS" signature="init_Browser()[pri:0, instance:com.qa.crud.testcases.AddressListTestcases@2f686d1f]" name="init_Browser" is-config="true" duration-ms="9325" started-at="2021-10-23T13:07:22Z" finished-at="2021-10-23T13:07:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init_Browser -->
+        <test-method status="PASS" signature="getAddressTest(java.lang.String)[pri:0, instance:com.qa.crud.testcases.AddressListTestcases@2f686d1f]" name="getAddressTest" duration-ms="1350" started-at="2021-10-23T13:07:32Z" data-provider="showTestData" finished-at="2021-10-23T13:07:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Syed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAddressTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.crud.testcases.AddressListTestcases@2f686d1f]" name="tearDown" is-config="true" duration-ms="725" started-at="2021-10-23T13:07:33Z" finished-at="2021-10-23T13:07:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.crud.testcases.AddressListTestcases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
