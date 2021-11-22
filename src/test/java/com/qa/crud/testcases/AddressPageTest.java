@@ -2,13 +2,16 @@ package com.qa.crud.testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.qa.crud.base.Browser;
+import com.qa.crud.listeners.CustomListeners;
 import com.qa.crud.pages.Address;
 import com.qa.crud.pages.AddressPage;
 import com.qa.crud.utilites.ReadExcel;
 
+@Listeners(CustomListeners.class)
 public class AddressPageTest extends Browser {
 
 	
@@ -50,8 +53,8 @@ Assert.assertEquals(msg, "Address was successfully created.");
 @Test(dataProvider="updateTestData")
 public void updateAddressTest(String fname, String lastName, String address, String city, String zipCode)
 {
-add=new Address(fname,lastName,address,city,zipCode);
-addresspage.addAddress(add);
+/*add=new Address(fname,lastName,address,city,zipCode);
+addresspage.addAddress(add);*/
 add.setLastName(lastName);
 add.setAddress(address);
 String msg=addresspage.updateAddress(add,add.getFirstName());

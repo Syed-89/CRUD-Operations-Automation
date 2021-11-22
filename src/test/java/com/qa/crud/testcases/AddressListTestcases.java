@@ -38,9 +38,9 @@ public class AddressListTestcases extends Browser {
 	
 	
 	@Test(dataProvider="deleteTestData")
-	public void deleteAddressTest()
+	public void deleteAddressTest(String fname)
 	{
-	String msg=addresslisting.deleteAddress("paul");
+	String msg=addresslisting.deleteAddress(fname);
 	Assert.assertEquals(msg, "Address was successfully destroyed.");
 	}
 	

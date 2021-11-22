@@ -1,9 +1,6 @@
 package com.qa.crud.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.qa.crud.base.Browser;
 import com.qa.crud.utilites.WaitUtil;
 
@@ -32,8 +29,7 @@ public void clickOnAddressLink()
 
 public AddressPage onClickNewAddresslink()
 {
-	WebDriverWait wait= new WebDriverWait(driver,20);
-	wait.until(ExpectedConditions.presenceOfElementLocated(newAddressLink));
+	WaitUtil.waitForElement(newAddressLink, 20);
 	driver.findElement(newAddressLink).click();
     return new AddressPage();
 }

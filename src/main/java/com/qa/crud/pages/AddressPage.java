@@ -1,10 +1,8 @@
 package com.qa.crud.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.qa.crud.base.Browser;
+import com.qa.crud.utilites.WaitUtil;
 
 public class AddressPage extends Browser  {
 	
@@ -30,8 +28,7 @@ public class AddressPage extends Browser  {
 	private String fillAddressform(Address address)
 	{
 		
-		WebDriverWait wait= new WebDriverWait(driver,20);
-		wait.until(ExpectedConditions.presenceOfElementLocated(firstName));
+		WaitUtil.waitForElement(firstName, 20);
 		driver.findElement(firstName).clear();
 		driver.findElement(firstName).sendKeys(address.getFirstName());
 		driver.findElement(lastName).clear();
